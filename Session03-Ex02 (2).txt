@@ -1,0 +1,22 @@
+1.lí do đường dẫn Tuyệt đối (Absolute Path) gây lỗi 
+Đường dẫn tuyệt đối là đường dẫn ghi lại toàn bộ lộ trình từ ổ đĩa gốc của máy tính.Khi chương trình chạy, Python sẽ cố tìm file theo đúng lộ trình cứng (hoàn toàn khác nhau giữa các máy) . kết quả file không tìm dc và lỗi.
+2. Phân tích Luồng IPO (Input - Process - Output) của Ứng dụng khi nạp từ Storage vào RAM 
+Input (Đầu vào từ Storage): Chương trình gửi yêu cầu đọc dữ liệu file ảnh từ đĩa cứng (SSD/HDD) thông qua hệ thống đường dẫn 
+Process (Xử lý trên RAM và CPU): Hệ điều hành nạp dữ liệu nhị phân của hình ảnh từ SSD vào RAM. CPU tiến hành giải mã định dạng ảnh (PNG/JPG) thành mảng pixel (Bitmap). Nếu ứng dụng tải quá nhiều ảnh kích thước lớn cùng lúc mà không nén, dung lượng bộ nhớ RAM bị chiếm dụng tăng đột biến.
+Output (Đầu ra): Giao diện đồ họa (GUI) lấy dữ liệu từ RAM để dựng hình và hiển thị logo lên màn hình cho người dùng.
+
+3.Giải pháp Kỹ thuật
+- Viết lại Cấu trúc Đường dẫn Tương đối (Relative Path) trong Python
+sử dụng các ký hiệu chuẩn:
+. : Thư mục hiện tại.
+.. : Thư mục cha (lùi ra ngoài 1 cấp).
+
+- Đề xuất 3 Bước Xử lý Giảm Lag cho Máy Bạn Thân (Dựa trên Task Manager)
+1.Mở Task Manager & Giải phóng RAM tức thì:Xử lý nhanh tình trạng RAM 98%.
+Nhấn tổ hợp phím Ctrl + Shift + Esc để mở Task Manager.
+Đóng các ứng dụng ngốn RAM không cần thiết như các tab Chrome/Edge không dùng, Discord, hoặc các ứng dụng chạy ngầm.
+2.Tối ưu hóa Tài nguyên Ảnh (Assets Optimization):Ngăn ngừa tràn bộ nhớ RAM do ứng dụng.
+Kiểm tra kích thước file ảnh trong thư mục
+Trong code Python, ưu tiên giải phóng bộ nhớ (release/close) đối với các biến chứa dữ liệu hình ảnh sau khi không sử dụng 
+3.Bật Memory Saver 
+Bật chế độ Memory Saver trên trình duyệt web (Chrome/Edge) để tự động giải phóng tài nguyên của các tab không hoạt động
